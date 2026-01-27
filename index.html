@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ChatGPT Codex Dashboard</title>
+</head>
+<body>
+  <h1>ChatGPT Codex Dashboard</h1>
+  <p>This dashboard connects to ChatGPT Codex for code generation.</p>
+  <textarea id="prompt" placeholder="Enter your request"></textarea>
+  <button id="run">Run</button>
+  <pre id="output"></pre>
+  <script>
+    // Placeholder for integration with ChatGPT Codex API (requires backend).
+    document.getElementById('run').addEventListener('click', function() {
+      var prompt = document.getElementById('prompt').value;
+      // call to Codex would go here
+      document.getElementById('output').textContent = 'Result will appear here.';
+    });
+  </script>
+</body>
+</html>
