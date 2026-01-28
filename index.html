@@ -1,22 +1,299 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ChatGPT Codex Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Innotech Services 2026 Presentation</title>
+  <style>
+    :root {
+      --ink: #1f1f1f;
+      --orange: #f5a623;
+      --blue: #63c8f2;
+      --gray: #d9d9d9;
+      --bright: #fef4d6;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top, #fff7e6 0%, var(--bright) 45%, #ffeec1 100%);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide {
+      min-height: 100vh;
+      padding: 48px 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      justify-content: space-between;
+      border-bottom: 6px solid var(--orange);
+    }
+
+    .slide:nth-child(2) {
+      background: linear-gradient(120deg, #fff7ff 0%, #e9f7ff 55%, #d6f0ff 100%);
+      border-bottom-color: var(--blue);
+    }
+
+    .slide:nth-child(3) {
+      background: linear-gradient(135deg, #fff6df 0%, #fff1b8 50%, #ffefad 100%);
+      border-bottom-color: var(--orange);
+    }
+
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo svg {
+      width: 220px;
+      height: auto;
+    }
+
+    .slide-title {
+      font-size: clamp(32px, 4vw, 56px);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #4c4c4c;
+      max-width: 680px;
+      margin: 8px 0 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
+      border: 2px solid rgba(99, 200, 242, 0.35);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .highlight {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--orange);
+      margin: 0 0 8px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .tag {
+      background: rgba(245, 166, 35, 0.18);
+      color: #a25f00;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 720px) {
+      .slide {
+        padding: 32px 24px;
+      }
+
+      .slide-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo svg {
+        width: 180px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>ChatGPT Codex Dashboard</h1>
-  <p>This dashboard connects to ChatGPT Codex for code generation.</p>
-  <textarea id="prompt" placeholder="Enter your request"></textarea>
-  <button id="run">Run</button>
-  <pre id="output"></pre>
-  <script>
-    // Placeholder for integration with ChatGPT Codex API (requires backend).
-    document.getElementById('run').addEventListener('click', function() {
-      var prompt = document.getElementById('prompt').value;
-      // call to Codex would go here
-      document.getElementById('output').textContent = 'Result will appear here.';
-    });
-  </script>
+  <main>
+    <section class="slide">
+      <header class="slide-header">
+        <div class="logo" aria-label="Innotech Services + Install">
+          <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path d="M50 40 C140 -20 330 -20 500 40" fill="none" stroke="#e3e3e3" stroke-width="18" />
+            <path d="M140 180 C300 240 470 240 600 150" fill="none" stroke="#e3e3e3" stroke-width="18" />
+            <text x="40" y="120" font-size="110" font-family="Arial, sans-serif" fill="#1f1f1f">inno</text>
+            <text x="310" y="120" font-size="110" font-family="Arial, sans-serif" fill="#f5a623">tech</text>
+            <text x="60" y="185" font-size="54" font-family="Arial, sans-serif" letter-spacing="6" fill="#63c8f2">SERVICES</text>
+            <text x="350" y="185" font-size="54" font-family="Arial, sans-serif" letter-spacing="6" fill="#63c8f2">+ INSTALL</text>
+          </svg>
+        </div>
+        <span class="tag">2026 Strategic Briefing</span>
+      </header>
+      <div>
+        <h1 class="slide-title">Innotech Services Business Mandate</h1>
+        <p class="subtitle">Our mandate keeps service excellence, safe installs, and growth aligned to customer trust and operational discipline.</p>
+      </div>
+      <div class="content-grid">
+        <div class="card">
+          <h3>Customer Promise</h3>
+          <ul>
+            <li>24-hour response window for residential service.</li>
+            <li>Zero-defect installation target with proactive check-ins.</li>
+            <li>Net Promoter Score goal of 72.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Operational Excellence</h3>
+          <ul>
+            <li>Lean routing for field teams to cut drive time 18%.</li>
+            <li>Unified scheduling across service + install divisions.</li>
+            <li>Safety-first compliance across every crew.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Growth Mandate</h3>
+          <ul>
+            <li>Expand multi-family contracts in three metro regions.</li>
+            <li>Launch premium maintenance plans by Q3.</li>
+            <li>Increase referral conversions by 22%.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Innotech Services + Install</span>
+        <span>Mandate Page 1 of 3</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <header class="slide-header">
+        <div class="logo" aria-label="Innotech Services + Install">
+          <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path d="M50 40 C140 -20 330 -20 500 40" fill="none" stroke="#e3e3e3" stroke-width="18" />
+            <path d="M140 180 C300 240 470 240 600 150" fill="none" stroke="#e3e3e3" stroke-width="18" />
+            <text x="40" y="120" font-size="110" font-family="Arial, sans-serif" fill="#1f1f1f">inno</text>
+            <text x="310" y="120" font-size="110" font-family="Arial, sans-serif" fill="#f5a623">tech</text>
+            <text x="60" y="185" font-size="54" font-family="Arial, sans-serif" letter-spacing="6" fill="#63c8f2">SERVICES</text>
+            <text x="350" y="185" font-size="54" font-family="Arial, sans-serif" letter-spacing="6" fill="#63c8f2">+ INSTALL</text>
+          </svg>
+        </div>
+        <span class="tag">FY2025 Results</span>
+      </header>
+      <div>
+        <h1 class="slide-title">2025 Financial Performance</h1>
+        <p class="subtitle">FY2025 delivered strong revenue momentum and margin resilience driven by service mix and efficient installation cycles.</p>
+      </div>
+      <div class="content-grid">
+        <div class="card">
+          <p class="highlight">$48.2M</p>
+          <h3>Revenue</h3>
+          <p>+14% year-over-year, led by service renewals and light commercial installs.</p>
+        </div>
+        <div class="card">
+          <p class="highlight">32.5%</p>
+          <h3>Gross Margin</h3>
+          <p>Expanded 210 bps through route optimization and supplier rebates.</p>
+        </div>
+        <div class="card">
+          <p class="highlight">$6.8M</p>
+          <h3>Operating Cash</h3>
+          <p>Cash generation funded fleet upgrades and warehouse automation.</p>
+        </div>
+        <div class="card">
+          <p class="highlight">94%</p>
+          <h3>On-Time Install</h3>
+          <p>Highest delivery accuracy in company history.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Innotech Services + Install</span>
+        <span>Performance Page 2 of 3</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <header class="slide-header">
+        <div class="logo" aria-label="Innotech Services + Install">
+          <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path d="M50 40 C140 -20 330 -20 500 40" fill="none" stroke="#e3e3e3" stroke-width="18" />
+            <path d="M140 180 C300 240 470 240 600 150" fill="none" stroke="#e3e3e3" stroke-width="18" />
+            <text x="40" y="120" font-size="110" font-family="Arial, sans-serif" fill="#1f1f1f">inno</text>
+            <text x="310" y="120" font-size="110" font-family="Arial, sans-serif" fill="#f5a623">tech</text>
+            <text x="60" y="185" font-size="54" font-family="Arial, sans-serif" letter-spacing="6" fill="#63c8f2">SERVICES</text>
+            <text x="350" y="185" font-size="54" font-family="Arial, sans-serif" letter-spacing="6" fill="#63c8f2">+ INSTALL</text>
+          </svg>
+        </div>
+        <span class="tag">FY2026 Outlook</span>
+      </header>
+      <div>
+        <h1 class="slide-title">2026 Budget And Plans</h1>
+        <p class="subtitle">Focused investments accelerate service reliability, tech-enabled installs, and people development.</p>
+      </div>
+      <div class="content-grid">
+        <div class="card">
+          <h3>Budget Priorities</h3>
+          <ul>
+            <li>$3.2M for fleet electrification and routing tech.</li>
+            <li>$1.4M for safety training and certification.</li>
+            <li>$2.1M for digital customer experience upgrades.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>2026 Initiatives</h3>
+          <ul>
+            <li>Launch 48-hour installation promise in core markets.</li>
+            <li>Expand preventive maintenance coverage by 25%.</li>
+            <li>Introduce bilingual service support for top regions.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>KPIs</h3>
+          <ul>
+            <li>Revenue target: $55M</li>
+            <li>Gross margin: 33.5%</li>
+            <li>Employee retention: 90%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Innotech Services + Install</span>
+        <span>Plans Page 3 of 3</span>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
